@@ -35,7 +35,7 @@ $(document).ready(function () {
     var wsc;
     linkws();
     function linkws() {
-        wsc = new WebSocket("ws://localhost:28664");
+        wsc = new WebSocket("ws://mc.szzz666.top:28664");
         wsc.onopen = function () {
             console.log("WebSocket 连接已建立。");
             let AuthMsg = {
