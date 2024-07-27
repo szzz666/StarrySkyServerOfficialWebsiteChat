@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.ico">
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet"
+        href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Minecraft 星空基岩服官方网站</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
 </head>
 
@@ -17,6 +22,8 @@
         <!-- top -->
         <div class="chat_top">
             [官网]Starry sky Server the Player
+            <i class="seting fa fa-cog" id="setingbtn" style="font-size:24px" data-bs-toggle="modal"
+                data-bs-target="#setingModal"></i>
         </div>
         <!-- middle -->
         <div class="chat_middle" id="chat_middle_item">
@@ -64,6 +71,44 @@
         </div>
     </div>
 
+    <!-- 模态框 -->
+    <div class="modal fade" id="setingModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">设置</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- 模态框内容 -->
+                <div class="modal-body">
+                    <label for="maxmsgnum" class="form-label">最大历史消息数:</label>
+                    <input type="number" class="form-control" id="maxmsgnum" name="maxmsgnum">
+                    <br>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="clearmsg">清空历史消息</button>
+                    <br><br>
+                    <label for="chatbgurl" class="form-label">聊天背景url:</label>
+                    <input type="text" class="form-control" id="chatbgurl" name="chatbgurl">
+                    <br>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="usebg" name="usebg" value="yes" checked>
+                        <label class="form-check-label" for="usebg">使用背景图</label>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-danger" id="resetseting">重置设置</button>
+                </div>
+
+                <!-- 模态框底部 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveseting">保存</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 </body>
